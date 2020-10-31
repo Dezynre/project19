@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block header %}
+  <h1 class="header">{% block title %}Log In{% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+	<form method="post" class="loginform" action="/auth/login">
+	    <label for="username">Username</label>
+	    <input name="username" id="username"  class="formcontrol" placeholder="your name..." required>
+	    <label for="password">Password</label>
+	    <input type="password" name="password" id="password"  class="formcontrol" placeholder="your password... " required>
+	    <button type="submit" class="btn btn-submit">OK</button>	
+  </form>
+{% endblock %}
